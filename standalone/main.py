@@ -99,7 +99,7 @@ def execute(filename, source, data=None):
 def on_announce(client, userdata, msg):
     logger.info("MQTT Receive: {}, {}".format(msg.topic,msg.payload.decode()))
     data = json.loads(msg.payload.decode())
-    filename = '../python_scripts/shellies_discovery.py'
+    filename = './python_scripts/shellies_discovery.py'
 
     with open(filename, encoding="utf8") as fil:
         source = fil.read()

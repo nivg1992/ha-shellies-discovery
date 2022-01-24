@@ -7,4 +7,4 @@ RUN CFLAGS=-fcommon apk add --no-cache \
         linux-headers \
         musl-dev
 RUN pip install -r ./standalone/requirements.txt
-CMD ["python", "main.py"]
+CMD ["python", "./standalone/main.py"]

@@ -23,10 +23,10 @@ logging.basicConfig(level=logging.DEBUG,
 
 logger = logging.getLogger('standalone-main')
 
-mqtt_host = os.getenv('MQTT_HOST', '192.168.14.250')
+mqtt_host = os.getenv('MQTT_HOST', '127.0.0.1')
 mqtt_port = int(os.getenv('MQTT_PORT', 1883))
-mqtt_user = os.getenv('MQTT_USER', 'emqx')
-mqtt_password = os.getenv('MQTT_PASSWORD', 'public')
+mqtt_user = os.getenv('MQTT_USER', '')
+mqtt_password = os.getenv('MQTT_PASSWORD', '')
 
 class CallMock():
     def __init__(self, client):
